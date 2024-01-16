@@ -21,6 +21,7 @@ steps:
     projects: '**/WebApp.csproj'
 
 - task: DotNetCoreCLI@2
+  displayName: Build application
   inputs:
     command: 'build'
     projects: '**/WebApp.csproj'
@@ -29,6 +30,7 @@ steps:
 
 
 - task: DotNetCoreCLI@2
+  displayName: Publish Application
   inputs:
     command: 'publish'
     publishWebProjects: true
@@ -36,6 +38,7 @@ steps:
 
 
 - task: PublishBuildArtifacts@1
+  displayName: copy to artifacts
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
