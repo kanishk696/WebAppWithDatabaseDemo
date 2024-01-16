@@ -20,17 +20,11 @@ steps:
     command: 'restore'
     projects: '**/WebApp.csproj'
 
-- task: DotNetCoreCLI@2
-  displayName: Build application
-  inputs:
-    command: 'build'
-    projects: '**/WebApp.csproj'
-    arguments: '--configuration $(buildConfiguration)'
 
 
 
 - task: DotNetCoreCLI@2
-  displayName: Publish Application
+  displayName: create webpackage.zip
   inputs:
     command: 'publish'
     publishWebProjects: true
