@@ -21,6 +21,7 @@ steps:
     projects: '**/WebApp.csproj'
 
 - task: DotNetCoreCLI@2
+  displayName: Apply testing
   inputs:
     command: 'build'
     projects: '**/WebApp.csproj'
