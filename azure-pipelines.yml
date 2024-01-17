@@ -20,6 +20,11 @@ steps:
     command: 'restore'
     projects: '**/WebApp.csproj'
 
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '**/WebApp.csproj'
+    arguments: '--configuration $(buildconfiguration)'
 
 
 
